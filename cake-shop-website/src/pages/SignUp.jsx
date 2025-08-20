@@ -28,7 +28,7 @@ const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     // Context and navigation hooks
-    // registerUser சார்பையும் useAppContext-லிருந்து பெறவும்
+    // Get the registerUser function from useAppContext as well
     const { registerUser, setSignupEmail, setSignupPassword } = useAppContext();
     const navigate = useNavigate();
 
@@ -63,7 +63,7 @@ const SignUp = () => {
 
         // If no errors, proceed with signup logic
         if (Object.keys(newErrors).length === 0) {
-            // registerUser சார்பை அழைக்கவும்
+            // Call the registerUser function
             const result = registerUser(email, password);
 
             if (result.success) {
@@ -206,6 +206,6 @@ const SignUp = () => {
             <Footer />
         </>
     );
-};0
+};
 
 export default SignUp;
