@@ -18,7 +18,7 @@ import googleIcon from '../assets/images/google.png';
 import facebookIcon from '../assets/images/Facebook.png';
 
 const Login = () => {
-    // useAppContext-ல் இருந்து தேவையான states மற்றும் functions-ஐப் பெறவும்
+    // Get necessary states and functions from useAppContext
     const { registeredUsers, signupEmail, setIsLoggedIn } = useAppContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -46,13 +46,13 @@ const Login = () => {
             return;
         }
 
-        // 2. registeredUsers பட்டியலை சரிபார்க்கவும்
+        // 2. Check the registeredUsers list
         const user = registeredUsers.find(
             (user) => user.email === email && user.password === password
         );
 
         if (user) {
-            // பயனர் கண்டறியப்பட்டால், உள்நுழைவு வெற்றிகரமாக இருக்கும்
+            // If user is found, login is successful
             alert('Login successful!');
 
             // Set the login status to true
@@ -61,7 +61,7 @@ const Login = () => {
             console.log('Login successful!');
             navigate('/'); // Navigate to the root/home page after the alert
         } else {
-            // பயனர் கண்டறியப்படவில்லை என்றால், பிழையைக் காண்பிக்கவும்
+            // If user is not found, display an error
             setError('Invalid email or password. Please try again.');
         }
     };
