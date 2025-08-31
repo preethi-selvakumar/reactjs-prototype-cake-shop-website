@@ -119,8 +119,8 @@ export const AppProvider = ({ children }) => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
-        // Set a new timer for 15 minutes (900,000 milliseconds)
-        timeoutRef.current = setTimeout(handleLogout, 900000); // 15 minutes
+        // Set a timer for 30 minutes (1,800,000 milliseconds)
+        timeoutRef.current = setTimeout(handleLogout, 1800000); // 30 minutes
     };
 
     // New function to register a user
