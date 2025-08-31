@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className="footer-column">
                             <h3 className="column-title">ONLINE SHOPPING</h3>
                             <ul className="column-list">
-                                <li><a href="#home" className="column-link">Home</a></li>
+                                <li><a href="/" className="column-link">Home</a></li>
                                 <li><a href="#products" className="column-link">products</a></li>
                                 <li><a href="#about-us" className="column-link">about us</a></li>
                                 <li><a href="#special-cake" className="column-link">special cake</a></li>
