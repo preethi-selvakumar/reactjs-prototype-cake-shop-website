@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import companyLogo from '../assets/images/cake-logo.png';
 import facebookIcon from '../assets/images/Facebook.png';
@@ -22,13 +23,13 @@ const Footer = () => {
                     <div className="footer-columns">
                         <div className="footer-column">
                             <h3 className="column-title">ONLINE SHOPPING</h3>
-                            <ul className="column-list">
-                                <li><a href="/" className="column-link">Home</a></li>
-                                <li><a href="#products" className="column-link">products</a></li>
-                                <li><a href="/about" className="column-link">about us</a></li>
-                                <li><a href="/special-cakes" className="column-link">special cake</a></li>
-                                <li><a href="/snacks" className="column-link">Snacks</a></li>
-                                <li><a href="/contact" className="column-link">Contact</a></li>
+                           <ul className="column-list">
+                                <li><Link to="/" className="column-link">Home</Link></li>
+                                <li><Link to="/" className="column-link">products</Link></li>
+                                <li><Link to="/about" className="column-link">about us</Link></li>
+                                <li><Link to="/special-cakes" className="column-link">special cake</Link></li>
+                                <li><Link to="/snacks" className="column-link">Snacks</Link></li>
+                                <li><Link to="/contact" className="column-link">Contact</Link></li>
                             </ul>
                         </div>
 
